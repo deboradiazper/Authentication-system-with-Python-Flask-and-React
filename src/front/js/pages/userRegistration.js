@@ -34,7 +34,7 @@ export const UserRegistration = () => {
     // e.preventDefault();
     addInfo(data);
     if (data) {
-      navigate("/registrationValidated");
+      navigate("/userLogin");
     }
   };
 
@@ -61,7 +61,7 @@ export const UserRegistration = () => {
   };
 
   return (
-    <div className="registro">
+    <div className="registro position-absolute top-50 start-50 translate-middle">
       <div className="registration col-12 mb-3 mt-5 text-center"></div>
 
       <div className="row">
@@ -72,20 +72,20 @@ export const UserRegistration = () => {
             id="registration"
           >
             <div className="col-12 mb-3 mt-1 text-center">
-              <p>
-                <b>¿No tienes una cuenta?</b>
+              <p className="prueba">
+                <b>Regístrate</b>
               </p>
               <input
                 className="input-reg mt-1"
                 name="name"
-                placeholder=" Nombre"
+                placeholder="Nombre"
                 autoComplete="off"
                 type="text"
                 {...register("name", {
-                  required: "Por favor, introduce un nombre válido",
+                  required: "introduce un nombre válido",
                   minLength: {
                     value: 3,
-                    message: "Por favor, introduce un nombre válido",
+                    message: "introduce un nombre válido",
                   },
                 })}
                 onChange={handleInputChange}
@@ -97,14 +97,14 @@ export const UserRegistration = () => {
               <input
                 className="input-reg"
                 name="lastName"
-                placeholder=" Apellido"
+                placeholder="Apellidos"
                 autoComplete="off"
                 type="text"
                 {...register("lastName", {
-                  required: "Por favor, introduce un apellido válido",
+                  required: "introduce un apellido válido",
                   minLength: {
                     value: 3,
-                    message: "Por favor, introduce un apellido válido",
+                    message: "introduce un apellido válido",
                   },
                 })}
                 onChange={handleInputChange}
@@ -116,17 +116,17 @@ export const UserRegistration = () => {
               <input
                 className="input-reg"
                 name="email"
-                placeholder=" Email"
+                placeholder="Email"
                 autoComplete="off"
                 type="text"
                 {...register("email", {
                   required: {
                     value: true,
-                    message: "Por favor, introduce un email válido",
+                    message: "introduce un email válido",
                   },
                   pattern: {
                     value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i,
-                    message: "Por favor, introduce un email válido",
+                    message: "introduce un email válido",
                   },
                 })}
                 onChange={handleInputChange}
@@ -138,13 +138,13 @@ export const UserRegistration = () => {
               <input
                 className="input-reg"
                 name="password"
-                placeholder=" Contraseña"
+                placeholder="Contraseña"
                 autoComplete="off"
                 type="password"
                 {...register("password", {
                   required: {
                     value: true,
-                    message: "Por favor, introduce una contraseña válida",
+                    message: "introduce una contraseña válida",
                   },
                   minLength: {
                     value: 6,
@@ -159,10 +159,6 @@ export const UserRegistration = () => {
             <div className="col-12  mb-3 text-center">
               <button className="ctaregister">
                 <span>Enviar</span>
-                <svg viewBox="0 0 13 10" height="10px" width="15px">
-                  <path d="M1,5 L11,5"></path>
-                  <polyline points="8 1 12 5 8 9"></polyline>
-                </svg>
               </button>
             </div>
           </form>

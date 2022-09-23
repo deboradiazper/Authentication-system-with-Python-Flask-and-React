@@ -16,14 +16,14 @@ export const UserLogin = () => {
     const result = await actions.login(email, password);
     console.log(result);
     if (result) {
-      navigate("/");
+      navigate("/registrationValidated ");
     } else {
       setError("Email o contraseña incorrectos");
     }
   };
 
   return (
-    <div className="logueo">
+    <div className="logueo registro position-absolute top-50 start-50 translate-middle">
       <div className="col-12 text-center mt-5">
         <div>
           <div className="row">
@@ -37,7 +37,7 @@ export const UserLogin = () => {
                     className="input-reg mt-1"
                     name="email"
                     value={email}
-                    placeholder=" Email"
+                    placeholder="Email"
                     autoComplete="off"
                     type="text"
                     onChange={(event) => setEmail(event.target.value)}
@@ -48,7 +48,7 @@ export const UserLogin = () => {
                     className="input-reg"
                     name="Password"
                     value={password}
-                    placeholder=" contraseña"
+                    placeholder="contraseña"
                     autoComplete="off"
                     type="password"
                     onChange={(event) => setPassword(event.target.value)}
@@ -56,7 +56,7 @@ export const UserLogin = () => {
                   {error ? <p className="error">{error}</p> : ""}
                 </div>
                 <div className="col-12 text-center mb-3">
-                  <button className="ctalogin">
+                  <button class="ctalogin">
                     <span>Enviar</span>
                     <svg viewBox="0 0 13 10" height="10px" width="15px">
                       <path d="M1,5 L11,5"></path>

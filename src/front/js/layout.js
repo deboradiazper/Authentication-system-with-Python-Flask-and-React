@@ -11,6 +11,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { UserRegistration } from "./pages/userRegistration";
 import { UserLogin } from "./pages/userLogin";
+import { RegistrationValidated } from "./pages/registrationValidated";
 
 //create your first component
 const Layout = () => {
@@ -30,6 +31,10 @@ const Layout = () => {
             <Route element={<h1>Not found!</h1>} />
             <Route element={<UserRegistration />} path="/userRegistration" />
             <Route element={<UserLogin />} path="/userLogin" />
+            <Route
+              element={<RegistrationValidated />}
+              path="/registrationValidated"
+            />
           </Routes>
           <Footer />
         </ScrollToTop>

@@ -96,8 +96,7 @@ const getState = ({ getStore, getActions, setStore }) => {
             token: data.token,
           });
           const actions = getActions();
-          actions.loadToprecipe();
-          actions.loadRecipe();
+          actions.login();
           return true;
         } catch (error) {
           console.error("there has been an error login in");
@@ -123,12 +122,6 @@ const getState = ({ getStore, getActions, setStore }) => {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         const actions = getActions();
-        const recipesResult = actions.loadRecipe();
-        const recipesTop = actions.loadToprecipe();
-        if (recipesTop && recipesResult) {
-          return true;
-        }
-        return false;
       },
     },
   };

@@ -1,3 +1,54 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+@import "https://fonts.googleapis.com/css?family=Press+Start+2P";
+
+html,
+body,
+pre,
+code,
+kbd,
+samp {
+  font-family: "Press Start 2P", cursive;
+}
+html {
+  cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABFklEQVRYR9WXURLDIAhE6/0PbSdOtUpcd1Gnpv1KGpTHBpCE1/cXq+vrMph7dGvXZTtpfW10DCA5jrH1H0Jhs5E0hnZdCR+vb5S8Nn8mQCeS9BdSalYJqMBjAGzq59xAESN7VFVUgV8AZB/dZBR7QTFDCqGquvUBVVoEtgIwpQRzmANSFHgWQKExHdIrPeuMvQNDarXe6nC/AutgV3JW+6bgqQLeV8FekRtgV+ToDKEKnACYKsfZjjkam7a0ZpYTytwmgainpC3HvwBocgKOxqRjehoR9DFKNFYtOwCGYCszobeCbl26N6yyQ6g8X/Wex/rBPsNEV6qAMaJPMynIHQCoSqS9JSMmwef51LflTgCRszU7DvAGiV6mHWfsaVUAAAAASUVORK5CYII=),
+    auto;
+}
+
+body {
+  background-image: url(https://wallpapercave.com/wp/wp3492543.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+}
+
+.navbar-brand {
+  text-decoration: none;
+}
+
+.ctaregister {
+  transition-duration: 0.4s;
+  padding: 8px;
+}
+
+.ctaregister:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.ctalogin {
+  transition-duration: 0.4s;
+}
+
+.ctalogin:hover {
+  background-color: #4caf50; /* Green */
+  color: white;
+}
+
+.size {
+  font-size: 13px !important;
+}
+
+.errorsinput {
+  font-size: 10px !important;
+}
